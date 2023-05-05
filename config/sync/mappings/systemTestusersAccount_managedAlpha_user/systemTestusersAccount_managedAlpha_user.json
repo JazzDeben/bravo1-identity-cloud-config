@@ -1,0 +1,108 @@
+{
+  "consentRequired": false,
+  "correlationQuery": [
+    {
+      "globals": {},
+      "linkQualifier": "default",
+      "source": "var query = { '_queryFilter': 'userName eq \\\"' + source.uid + '\\\"' };\nquery;",
+      "type": "text/javascript"
+    }
+  ],
+  "displayName": "systemTestusersAccount_managedAlpha_user",
+  "icon": null,
+  "name": "systemTestusersAccount_managedAlpha_user",
+  "policies": [
+    {
+      "action": "EXCEPTION",
+      "situation": "AMBIGUOUS"
+    },
+    {
+      "action": "EXCEPTION",
+      "situation": "SOURCE_MISSING"
+    },
+    {
+      "action": "EXCEPTION",
+      "situation": "MISSING"
+    },
+    {
+      "action": "EXCEPTION",
+      "situation": "FOUND_ALREADY_LINKED"
+    },
+    {
+      "action": "DELETE",
+      "situation": "UNQUALIFIED"
+    },
+    {
+      "action": "EXCEPTION",
+      "situation": "UNASSIGNED"
+    },
+    {
+      "action": "EXCEPTION",
+      "situation": "LINK_ONLY"
+    },
+    {
+      "action": "IGNORE",
+      "situation": "TARGET_IGNORED"
+    },
+    {
+      "action": "IGNORE",
+      "situation": "SOURCE_IGNORED"
+    },
+    {
+      "action": "IGNORE",
+      "situation": "ALL_GONE"
+    },
+    {
+      "action": "UPDATE",
+      "situation": "CONFIRMED"
+    },
+    {
+      "action": "UPDATE",
+      "situation": "FOUND"
+    },
+    {
+      "action": "CREATE",
+      "situation": "ABSENT"
+    }
+  ],
+  "properties": [
+    {
+      "source": "uid",
+      "target": "userName"
+    },
+    {
+      "source": "cn",
+      "target": "cn"
+    },
+    {
+      "source": "sn",
+      "target": "sn"
+    },
+    {
+      "source": "givenName",
+      "target": "givenName"
+    },
+    {
+      "source": "mail",
+      "target": "mail"
+    },
+    {
+      "source": "userPassword",
+      "target": "password",
+      "transform": {
+        "globals": {},
+        "source": "// Set the text of {ds_abbr} userPassword as the value of the password:\nif (source != null) {\n  var base64 = Packages.org.forgerock.util.encode.Base64url;\n  decodedTarget = new Packages.java.lang.String(base64.decode(source));\n  target = decodedTarget;\n}",
+        "type": "text/javascript"
+      }
+    },
+    {
+      "source": "mail",
+      "target": "mail"
+    }
+  ],
+  "source": "system/TestUsers/account",
+  "sourceQuery": {
+    "_queryFilter": "!(uid eq \"am-identity-bind-account\")"
+  },
+  "target": "managed/alpha_user"
+}

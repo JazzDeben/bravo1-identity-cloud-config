@@ -1,0 +1,20 @@
+{
+  "_id": "schedule/liveTestUsers",
+  "concurrentExecution": false,
+  "enabled": true,
+  "endTime": null,
+  "invokeContext": {
+    "action": "liveSync",
+    "source": "system/TestUsers/account"
+  },
+  "invokeLogLevel": "info",
+  "invokeService": "provisioner",
+  "isCron": false,
+  "misfirePolicy": "fireAndProceed",
+  "persisted": true,
+  "repeatCount": -1,
+  "repeatInterval": 5000,
+  "startTime": null,
+  "timeZone": null,
+  "type": "simple"
+}

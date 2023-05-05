@@ -1,0 +1,15 @@
+{
+  "alpha_user": [
+    {
+      "searchField": "userName",
+      "searchValue": "user.0",
+      "fields": ["userName", "givenName", "sn", "mail", "authzRoles", "password"]
+    }
+  ],
+  "internal_role": [
+    {
+      "searchField": "name",
+      "searchValue": "help-desk"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "consentRequired": false,
+  "displayName": "managedAlpha_user_systemTestusersAccount",
+  "icon": null,
+  "links": "systemTestusersAccount_managedAlpha_user",
+  "name": "managedAlpha_user_systemTestusersAccount",
+  "policies": [
+    {
+      "action": "EXCEPTION",
+      "situation": "AMBIGUOUS"
+    },
+    {
+      "action": "EXCEPTION",
+      "situation": "SOURCE_MISSING"
+    },
+    {
+      "action": "EXCEPTION",
+      "situation": "MISSING"
+    },
+    {
+      "action": "EXCEPTION",
+      "situation": "FOUND_ALREADY_LINKED"
+    },
+    {
+      "action": "DELETE",
+      "situation": "UNQUALIFIED"
+    },
+    {
+      "action": "EXCEPTION",
+      "situation": "UNASSIGNED"
+    },
+    {
+      "action": "EXCEPTION",
+      "situation": "LINK_ONLY"
+    },
+    {
+      "action": "IGNORE",
+      "situation": "TARGET_IGNORED"
+    },
+    {
+      "action": "IGNORE",
+      "situation": "SOURCE_IGNORED"
+    },
+    {
+      "action": "IGNORE",
+      "situation": "ALL_GONE"
+    },
+    {
+      "action": "UPDATE",
+      "situation": "CONFIRMED"
+    },
+    {
+      "action": "UPDATE",
+      "situation": "FOUND"
+    },
+    {
+      "action": "CREATE",
+      "situation": "ABSENT"
+    }
+  ],
+  "properties": [
+    {
+      "source": "",
+      "target": "dn",
+      "transform": {
+        "globals": {},
+        "source": "var dn = 'uid=' + source.userName + ',ou=people,ou=identities';\ndn;",
+        "type": "text/javascript"
+      }
+    },
+    {
+      "source": "userName",
+      "target": "uid"
+    },
+    {
+      "source": "sn",
+      "target": "sn"
+    },
+    {
+      "source": "cn",
+      "target": "cn"
+    },
+    {
+      "source": "givenName",
+      "target": "givenName"
+    },
+    {
+      "source": "mail",
+      "target": "mail"
+    },
+    {
+      "source": "password",
+      "target": "userPassword"
+    }
+  ],
+  "source": "managed/alpha_user",
+  "target": "system/TestUsers/account",
+  "targetQuery": {
+    "_queryFilter": "!(uid eq \"am-identity-bind-account\")"
+  }
+}

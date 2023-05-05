@@ -1,0 +1,19 @@
+{
+  "alpha": {
+    "OAuth2Client": [
+      {
+        "id": "openidm-admin",
+        "overrides": {
+          "userpassword": "${MY_CLIENT_SECRET}"
+        }
+      },
+      {
+        "id": "RCSClient",
+        "overrides": {
+          "userpassword": "${MY_CLIENT_SECRET}"
+        }
+      }
+    ]
+  },
+  "bravo": {}
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "3ed02d16-21f8-4d21-984a-6070c45223c9",
+  "_rev": "b48167f6-1c69-41ee-9aba-00971b97c22f-90457",
+  "authzRoles": [
+    {
+      "_ref": "internal/role/659b6247-1ab7-4a41-96a9-6f20b6a3b1a6",
+      "_refProperties": {
+        "_id": "f4a1f068-4bad-4699-8a43-42c1099de822",
+        "_rev": "b48167f6-1c69-41ee-9aba-00971b97c22f-6682"
+      },
+      "_refResourceCollection": "internal/role",
+      "_refResourceId": "659b6247-1ab7-4a41-96a9-6f20b6a3b1a6"
+    }
+  ],
+  "givenName": "Aaccf",
+  "mail": "user.0@example.com",
+  "sn": "Amar",
+  "userName": "user.0"
+}
